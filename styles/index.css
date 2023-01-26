@@ -13,7 +13,7 @@ font-family: 'DM Sans', sans-serif; -> font for nav and general text
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(40deg, #181818, #0e0e0e 50%, #323232);
+  background: linear-gradient(70deg, #181818, #0e0e0e 50%, #323232);
   color: #ECF1F4;
   position: relative;
 }
@@ -239,8 +239,8 @@ footer > small {
   height: 50px;
   border-radius: 50%;
   border: none;
-  background-color: #898989;
-  display: flex;
+  background-color: #ECF1F4;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -256,6 +256,13 @@ footer > small {
   position: fixed;
   z-index: 5;
   top: 0;
+  left: -100%;
+  transition: 0.3s ease-in-out;
+}
+
+.opened {
+  left: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .mobileMenu-container {
@@ -267,12 +274,22 @@ footer > small {
   display: flex;
   flex-direction: column;
 }
+.mobileMenu-container > span {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .mobileLink, .mobileLinkContact {
   height: 40px;
   padding: 5px 10px;
   text-decoration: none;
   font-family: "DM Sans", sans-serif;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,10 +298,19 @@ footer > small {
 .mobileLink {
   color: #000;
 }
+.mobileLink:hover {
+  background-color: #dfdfdf;
+  transition: 0.2s;
+}
 
 .mobileLinkContact {
   background-color: #FF1C39;
   color: #ECF1F4;
+}
+
+.mobileMenu-closeIcon {
+  width: 20px;
+  height: 20px;
 }
 
 @media all and (max-width: 1024px) {
@@ -320,6 +346,9 @@ footer > small {
   .about-rightSide {
     display: flex;
     justify-content: center;
+  }
+  .mobileMenu-btn {
+    display: flex;
   }
 }
 @media all and (max-width: 626px) {

@@ -9,7 +9,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(40deg,#181818,#0e0e0e 50%,#323232);
+    background: linear-gradient(70deg,#181818,#0e0e0e 50%,#323232);
     color: $text-color;
     position: relative;
 }
@@ -236,8 +236,8 @@ footer {
     height: 50px;
     border-radius: 50%;
     border: none;
-    background-color: #898989;
-    display: flex;
+    background-color: $text-color;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -253,6 +253,13 @@ footer {
     position: fixed;
     z-index: 5;
     top: 0;
+    left: -100%;
+    transition: .3s ease-in-out;
+}
+
+.opened {
+    left: 0;
+    transition: .3s ease-in-out;
 }
 
 .mobileMenu-container {
@@ -263,6 +270,15 @@ footer {
     background-color: $text-color;
     display: flex;
     flex-direction: column;
+    > span {
+        width: fit-content;
+        height: fit-content;
+        padding: 10px;
+        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .mobileLink, .mobileLinkContact {
@@ -270,6 +286,7 @@ footer {
     padding: 5px 10px;
     text-decoration: none;
     font-family: $text-font;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,11 +294,20 @@ footer {
 
 .mobileLink {
     color: #000;
+    &:hover {
+        background-color: #dfdfdf;
+        transition: .2s;
+    }
 }
 
 .mobileLinkContact {
     background-color: $red-color;
     color: $text-color;
+}
+
+.mobileMenu-closeIcon {
+    width: 20px;
+    height: 20px;
 }
 
 @media all and (max-width: 1024px){
@@ -316,6 +342,8 @@ footer {
         display: flex;
         justify-content: center;
     }
+
+    .mobileMenu-btn { display: flex; }
 }
 
 @media all and (max-width: 626px){
