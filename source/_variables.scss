@@ -1,0 +1,22 @@
+/* BASIC STYLE
+'Josefin Sans', sans-serif -> font for "important" titles
+font-family: 'DM Sans', sans-serif; -> font for nav and general text
+#FF1C39 -> red color
+#ECF1F4 -> general text color
+*/
+
+// fonts
+$title-font: 'Josefin Sans', sans-serif;
+$text-font: 'DM Sans', sans-serif;
+
+// colors
+$red-color: #FF1C39;
+$text-color: #ECF1F4;
+$background-color: #171918;
+
+@mixin titles($font, $size, $space, $color){
+    font-family: $font;
+    font-size: $size;
+    letter-spacing: $space;
+    color: $color;
+}

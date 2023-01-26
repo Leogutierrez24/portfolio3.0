@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Leonel Gutierrez</title>
+</head>
+<body>
+    <header class="topBar">
+        <nav class="topBar-nav" id="navBar">
+            <a class="topBar-link" href="#home">Home</a>
+            <a class="topBar-link" href="#about">About me</a>
+            <a class="topBar-link" href="#projects">Projects</a>
+            <a class="topBar-contactLink" href="#contact">Contact</a>
+            <button type="button" class="mobileMenu-btn" id="mobileButton">
+                <img src="./assets/general-icons/list.svg" alt="menu icon" class="menu-icon" />
+            </button>
+        </nav>
+    </header>
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                Hi there, <span>I'm Leo</span>
+            </h1>
+            <h3 class="hero-subtitle">
+                I'm a Jr front end developer
+            </h3>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-leftSide">
+                <h3 class="about-title">About <span>me</span></h3>
+                <p class="about-text">
+                    My name is Leonel Gutierrez. I'm a self-taught web development student and I'm also study the software engineering career at the university.
+                    My objective is to keep improving my skills and knowledge about the back and frontend development as well.
+                </p>
+                <p class="about-text">
+                    The technologies I know are CSS, Javascript, SASS, React JS, C and a little of Node.js.
+                </p>
+                <a href="" class="about-link">
+                    See my cv <span>here</span>!
+                </a>
+            </div>
+            <div class="about-rightSide">
+                <figure>
+                    <img src="./assets/about-photo.png" alt="my photograph" class="about-photo">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <h3 class="projects-title">
+                My <span>Projects</span>
+            </h3>
+            <div class="projects-list">
+                <div class="project calculator">
+                    <a href="https://leogutierrez24.github.io/calculator/" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
+                </div>
+                <div class="project ecommerce">
+                    <a href="https://github.com/Leogutierrez24/pasokon-ecommerce" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
+                </div>
+                <div class="project todoList">
+                    <a href="" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h3 class="contact-title">
+            Contact me <span>here</span>!
+        </h3>
+        <div class="contact-formContainer">
+            <iframe title="contact form" src="https://docs.google.com/forms/d/e/1FAIpQLScjW_AzBXgAnSgfj6Tdsac35sIHUO9O8vuYooQh-G_TbfySug/viewform?embedded=true" class="form">Cargando…</iframe>
+        </div>
+        <div class="other-contacts">
+            <a href="https://www.linkedin.com/in/leonel-gutierrez97/" target="_blank" rel="noopener noreferrer" class="contact-icon" >
+                <img src="./assets/contact-icons/linkedin.svg" alt="linkedin logo" class="socialIcons" />
+            </a>
+            <a href="https://github.com/Leogutierrez24" target="_blank" rel="noopener noreferrer" class="contact-icon" >
+                <img src="./assets/contact-icons/github.svg" alt="github logo" class="socialIcons" />
+            </a>
+        </div>
+    </section>
+    <footer>
+        <small>Leonel Gutierrez 2023</small>
+    </footer>
+    <div class="mobileMenu">
+        <div class="mobileMenu-container">
+            <a class="mobileLink" href="#home">Home</a>
+            <a class="mobileLink" href="#about">About me</a>
+            <a class="mobileLink" href="#projects">Projects</a>
+            <a class="mobileLinkContact" href="#contact">Contact</a>
+        </div>
+    </div>
+    <script src="./javascript/DOM.js"></script>
+    <script src="./javascript/index.js"></script>
+</body>
+</html>
