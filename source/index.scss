@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,6 +17,8 @@ body {
     color: $text-color;
     position: relative;
 }
+
+a { -webkit-tap-highlight-color: transparent; }
 
 // Top bar
 
@@ -110,15 +116,8 @@ body {
 
 .about-leftSide {
     width: 70%;
+    max-width: 600px;
     padding-right: 18px;
-}
-
-.about-rightSide {
-    width: 30%;
-    min-width: 300px;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
 }
 
 .about-text { font-family: $text-font; }
@@ -130,6 +129,37 @@ body {
     > span { color: $red-color; }
 }
 
+.about-photoContainer {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.about-techsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-techsContent__a {
+    width: 50%;
+    max-width: 360px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-techsContent__b {
+    width: 60%;
+    max-width: 420px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
 // Projects section 
 
 .projects-container {
@@ -139,13 +169,20 @@ body {
 
 .projects-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    > div {
+        width: 100%;
+        max-width: 770px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
 
 .project {
-    width: 350px;
-    height: 400px;
+    width: 340px;
+    height: 340px;
     border-radius: 3px;
     margin-bottom: 20px;
     margin-right: 15px;
@@ -154,23 +191,35 @@ body {
     background-size: cover;
 }
 
-.project-link {
+.project-details {
     width: 100%;
     height: 100%;
+    padding: 10px;
     color: $text-color;
     font-family: $text-font;
     font-size: 1.2rem;
     opacity: 0;
     text-decoration: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     transition: .2s ease-in-out;
     &:hover {
         background-color: hsla(0,0%,100%,.102);
         opacity: 1;
         transition: .2s ease-in-out;
     }
+}
+
+.project-link {
+    width: fit-content;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: $text-color;
+    background-color: $red-color;
+    border-radius: 6px;
+    align-self: center;
 }
 
 .calculator {
@@ -186,6 +235,10 @@ body {
 // }
 
 // Contact section
+
+.contact-container {
+    padding-top: 100px;
+}
 
 .form {
     width: 100%;
@@ -274,6 +327,7 @@ footer {
         width: fit-content;
         height: fit-content;
         padding: 10px;
+        cursor: pointer;
         align-self: flex-end;
         display: flex;
         justify-content: center;
@@ -322,6 +376,11 @@ footer {
     }
 }
 
+@media all and (max-width: 869px) {
+    .projects-list > div { justify-content: center; }
+    .project { margin-right: 0; }
+}
+
 @media all and (max-width: 768px){
     .hero, .about, .projects, .contact { padding: 0 60px; }
 
@@ -342,6 +401,8 @@ footer {
         display: flex;
         justify-content: center;
     }
+
+    .about-rightSide { padding-top: 32px; }
 
     .mobileMenu-btn { display: flex; }
 }
@@ -365,7 +426,7 @@ footer {
 
     .project {
         width: 300px;
-        height: 350px
+        height: 300px
     }
 
 }
@@ -375,4 +436,17 @@ footer {
 
     .hero-title { font-size: 2rem; }
     .hero-subtitle { font-size: 1.35rem; }
+
+    .about-photoContainer {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media all and (min-width: 968px){
+    .about-leftSide { margin-right: 100px; }
+}
+
+@media all and (min-width: 768px){
+    .about-photoContainer { margin-top: 32px; }
 }
