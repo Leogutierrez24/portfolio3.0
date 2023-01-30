@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     position: relative;
 }
 
-a { -webkit-tap-highlight-color: transparent; }
+a, button, span { -webkit-tap-highlight-color: transparent; }
 
 // Top bar
 
@@ -103,7 +104,8 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 .hero-subtitle {
-    @include titles($title-font, 2.5rem, 0, $text-color)
+    @include titles($title-font, 2.5rem, 0, $text-color);
+    > span { color: $red-color; }
 }
 
 // About section
@@ -126,7 +128,10 @@ a { -webkit-tap-highlight-color: transparent; }
     text-decoration: none;
     font-family: $text-font;
     color: $text-color;
-    > span { color: $red-color; }
+    > span { 
+        color: $red-color; 
+        &:hover { color: $text-color; }
+    }
 }
 
 .about-photoContainer {
@@ -189,6 +194,7 @@ a { -webkit-tap-highlight-color: transparent; }
     transition: .2s ease-in-out;
     background-position: 50%;
     background-size: cover;
+    transition: .2s ease-in-out;
 }
 
 .project-details {
@@ -205,10 +211,20 @@ a { -webkit-tap-highlight-color: transparent; }
     justify-content: space-around;
     transition: .2s ease-in-out;
     &:hover {
-        background-color: hsla(0,0%,100%,.102);
         opacity: 1;
         transition: .2s ease-in-out;
+        .project-description, .project-link {
+            opacity: 1;
+            transform: translateY(5px);
+            transition: .2s ease-in-out;
+        }
     }
+}
+
+.project-description { 
+    text-transform: uppercase; 
+    opacity: 0;
+    transition: .2s ease-in-out;
 }
 
 .project-link {
@@ -220,10 +236,13 @@ a { -webkit-tap-highlight-color: transparent; }
     background-color: $red-color;
     border-radius: 6px;
     align-self: center;
+    opacity: 0;
+    transition: .2s ease-in-out;
 }
 
 .calculator {
-    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../assets/projects-img/project-preview.png);
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../assets/projects-img/project_calc.png);
+    background-repeat: no-repeat;
 }
 
 .ecommerce {
@@ -240,6 +259,15 @@ a { -webkit-tap-highlight-color: transparent; }
     padding-top: 100px;
 }
 
+.contact-formContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title {
+    text-align: center;
+}
+
 .form {
     width: 100%;
     max-width: 600px;
@@ -250,11 +278,11 @@ a { -webkit-tap-highlight-color: transparent; }
 }
 
 .other-contacts {
-    width: 100px;
+    width: 100%;
     height: fit-content;
     padding-top: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .contact-icon {
@@ -266,6 +294,7 @@ a { -webkit-tap-highlight-color: transparent; }
     height: 40px;
     filter: invert(26%) sepia(85%) saturate(5278%) hue-rotate(341deg) brightness(100%) contrast(103%);
     transition: .1s ease;
+    &:hover { filter: invert(97%) sepia(4%) saturate(1005%) hue-rotate(183deg) brightness(102%) contrast(91%); }
 }
 
 // Footer section
@@ -288,8 +317,9 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: none;
-    background-color: $text-color;
+    border: 1px solid #7e7e7e29;
+    background-color: #1d1d1d;
+    cursor: pointer;
     display: none;
     justify-content: center;
     align-items: center;
@@ -298,6 +328,7 @@ footer {
 .menu-icon {
     width: 24px;
     height: 24px;
+    filter: invert(56%) sepia(0%) saturate(37%) hue-rotate(333deg) brightness(89%) contrast(88%);
 }
 
 .mobileMenu {
@@ -364,21 +395,8 @@ footer {
     height: 20px;
 }
 
-@media all and (max-width: 1024px){
-    .contact-formContainer {
-        display: flex;
-        justify-content: center;
-    }
-
-    .other-contacts {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
 @media all and (max-width: 869px) {
     .projects-list > div { justify-content: center; }
-    .project { margin-right: 0; }
 }
 
 @media all and (max-width: 768px){

@@ -10,7 +10,24 @@ const closeMenu = (target, element) => {
     if (target === element) mobileMenu.classList.remove("opened");
 }
 
+const checkWindowSize = (size) => {
+    if (size >= 870) {
+        projectRow_1.setAttribute("data-aos", "fade-right");
+        projectRow_2.setAttribute("data-aos", "fade-left");
+    } else {
+        Array.from(projects).forEach((element) => {
+            element.setAttribute("data-aos", "fade-right");
+        });
+    }
+}
+
 window.addEventListener("resize", () => windowWidth = window.innerWidth);
+
+(() => {
+    checkWindowSize(windowWidth);
+})();
+
+AOS.init();
 
 menuButton.addEventListener("click", openMenu);
 

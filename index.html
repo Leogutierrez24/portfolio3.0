@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
+    <meta charset="UTF-8" />
+    <meta 
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+    <link
+        rel="stylesheet"
+        href="./styles/index.css"
+    />
+    <link 
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Leonel Gutierrez</title>
+    <!-- animation on scroll library -->
 </head>
 <body>
     <header class="topBar">
@@ -19,20 +37,20 @@
             </button>
         </nav>
     </header>
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <h1 class="hero-title">
+    <section class="hero">
+        <div class="hero-container" id="home">
+            <h1 class="hero-title animate__animated animate__slideInDown">
                 Hi there, <span>I'm Leo</span>
             </h1>
-            <h3 class="hero-subtitle">
-                I'm a Jr front end developer
+            <h3 class="hero-subtitle animate__animated animate__slideInUp">
+                I'm a <span>Jr front end developer</span>
             </h3>
         </div>
     </section>
-    <section class="about" id="about">
-        <div class="about-container">
+    <section class="about">
+        <div class="about-container" id="about">
             <div class="about-leftSide">
-                <h3 class="about-title">About <span>me</span></h3>
+                <h3 class="about-title animate__animated animate__zoomIn">About <span>me</span></h3>
                 <p class="about-text">
                     My name is Leonel Gutierrez. I'm a self-taught web development student and I'm also study the software engineering career at the university.
                     My objective is to keep improving my skills and knowledge about the back and frontend development as well.
@@ -64,17 +82,17 @@
             </div>
         </div>
     </section>
-    <section class="projects" id="projects">
-        <div class="projects-container">
+    <section class="projects">
+        <div class="projects-container" id="projects">
             <h3 class="projects-title">
                 My <span>Projects</span>
             </h3>
             <div class="projects-list">
-                <div>
+                <div id="pr_1">
                     <div class="project calculator">
                         <div class="project-details">
                             <p class="project-description">
-                                A basic calculator made just with Javascript
+                                A basic calculator made just with Javascript.
                             </p>
                             <a href="https://leogutierrez24.github.io/calculator/" target="_blank" rel="noopener noreferrer" class="project-link">See the project</a>
                         </div>
@@ -82,13 +100,13 @@
                     <div class="project ecommerce">
                         <div class="project-details">
                             <p class="project-description">
-                                texto de prueba texto de prueba texto de prueba
+                                An e-commerce created with React JS.
                             </p>
                             <a href="https://github.com/Leogutierrez24/pasokon-ecommerce" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div id="pr_2">
                     <div class="project todoList">
                         <div class="project-details">
                             <p class="project-description">
@@ -101,8 +119,8 @@
             </div>
         </div>
     </section>
-    <section class="contact" id="contact">
-        <div class="contact-container">
+    <section class="contact">
+        <div class="contact-container" id="contact">
             <h3 class="contact-title">
                 Contact me <span>here</span>!
             </h3>
@@ -134,6 +152,7 @@
         </div>
     </div>
     <script src="./javascript/DOM.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./javascript/index.js"></script>
 </body>
 </html>

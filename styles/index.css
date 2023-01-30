@@ -22,7 +22,7 @@ body {
   position: relative;
 }
 
-a {
+a, button, span {
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -120,6 +120,9 @@ a {
   letter-spacing: 0;
   color: #ECF1F4;
 }
+.hero-subtitle > span {
+  color: #FF1C39;
+}
 
 .about-container {
   padding-top: 100px;
@@ -144,6 +147,9 @@ a {
 }
 .about-link > span {
   color: #FF1C39;
+}
+.about-link > span:hover {
+  color: #ECF1F4;
 }
 
 .about-photoContainer {
@@ -204,6 +210,7 @@ a {
   transition: 0.2s ease-in-out;
   background-position: 50%;
   background-size: cover;
+  transition: 0.2s ease-in-out;
 }
 
 .project-details {
@@ -221,8 +228,18 @@ a {
   transition: 0.2s ease-in-out;
 }
 .project-details:hover {
-  background-color: hsla(0deg, 0%, 100%, 0.102);
   opacity: 1;
+  transition: 0.2s ease-in-out;
+}
+.project-details:hover .project-description, .project-details:hover .project-link {
+  opacity: 1;
+  transform: translateY(5px);
+  transition: 0.2s ease-in-out;
+}
+
+.project-description {
+  text-transform: uppercase;
+  opacity: 0;
   transition: 0.2s ease-in-out;
 }
 
@@ -235,10 +252,13 @@ a {
   background-color: #FF1C39;
   border-radius: 6px;
   align-self: center;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 
 .calculator {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/projects-img/project-preview.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/projects-img/project_calc.png);
+  background-repeat: no-repeat;
 }
 
 .ecommerce {
@@ -247,6 +267,15 @@ a {
 
 .contact-container {
   padding-top: 100px;
+}
+
+.contact-formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-title {
+  text-align: center;
 }
 
 .form {
@@ -259,11 +288,11 @@ a {
 }
 
 .other-contacts {
-  width: 100px;
+  width: 100%;
   height: fit-content;
   padding-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .contact-icon {
@@ -275,6 +304,9 @@ a {
   height: 40px;
   filter: invert(26%) sepia(85%) saturate(5278%) hue-rotate(341deg) brightness(100%) contrast(103%);
   transition: 0.1s ease;
+}
+.socialIcons:hover {
+  filter: invert(97%) sepia(4%) saturate(1005%) hue-rotate(183deg) brightness(102%) contrast(91%);
 }
 
 footer {
@@ -293,8 +325,9 @@ footer > small {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: none;
-  background-color: #ECF1F4;
+  border: 1px solid rgba(126, 126, 126, 0.1607843137);
+  background-color: #1d1d1d;
+  cursor: pointer;
   display: none;
   justify-content: center;
   align-items: center;
@@ -303,6 +336,7 @@ footer > small {
 .menu-icon {
   width: 24px;
   height: 24px;
+  filter: invert(56%) sepia(0%) saturate(37%) hue-rotate(333deg) brightness(89%) contrast(88%);
 }
 
 .mobileMenu {
@@ -369,22 +403,9 @@ footer > small {
   height: 20px;
 }
 
-@media all and (max-width: 1024px) {
-  .contact-formContainer {
-    display: flex;
-    justify-content: center;
-  }
-  .other-contacts {
-    width: 100%;
-    justify-content: center;
-  }
-}
 @media all and (max-width: 869px) {
   .projects-list > div {
     justify-content: center;
-  }
-  .project {
-    margin-right: 0;
   }
 }
 @media all and (max-width: 768px) {
