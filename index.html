@@ -23,7 +23,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <title>Leonel Gutierrez</title>
-    <!-- animation on scroll library -->
 </head>
 <body>
     <header class="topBar">
@@ -49,8 +48,8 @@
     </section>
     <section class="about">
         <div class="about-container" id="about">
-            <div class="about-leftSide">
-                <h3 class="about-title animate__animated animate__zoomIn">About <span>me</span></h3>
+            <div class="about-leftSide" data-aos="fade-up">
+                <h3 class="about-title">About <span>me</span></h3>
                 <p class="about-text">
                     My name is Leonel Gutierrez. I'm a self-taught web development student and I'm also study the software engineering career at the university.
                     My objective is to keep improving my skills and knowledge about the back and frontend development as well.
@@ -71,11 +70,11 @@
                         <img src="./assets/tech-icons/icons8-sass.svg" alt="sass logo" />
                     </div>
                 </div>
-                <a href="" class="about-link">
+                <a href="./download/leonel_gutierrez_cv.pdf" download="leonelGutierrez_curriculum" class="about-link">
                     See my cv <span>here</span>!
                 </a>
             </div>
-            <div class="about-rightSide">
+            <div class="about-rightSide" data-aos="fade-up">
                 <figure class="about-photoContainer">
                     <img src="./assets/about-photo.png" alt="my photograph" class="about-photo">
                 </figure>
@@ -84,7 +83,7 @@
     </section>
     <section class="projects">
         <div class="projects-container" id="projects">
-            <h3 class="projects-title">
+            <h3 class="projects-title" data-aos="fade-up">
                 My <span>Projects</span>
             </h3>
             <div class="projects-list">
@@ -100,7 +99,7 @@
                     <div class="project ecommerce">
                         <div class="project-details">
                             <p class="project-description">
-                                An e-commerce created with React JS.
+                                An e-commerce app created with React and Firebase.
                             </p>
                             <a href="https://github.com/Leogutierrez24/pasokon-ecommerce" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
                         </div>
@@ -110,28 +109,29 @@
                     <div class="project todoList">
                         <div class="project-details">
                             <p class="project-description">
-                                texto de prueba texto de prueba texto de prueba
+                                A Todo List created with React, Sass and saving the data in LocalStorage.
                             </p>
-                            <a href="" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
+                            <a href="https://github.com/Leogutierrez24/To-do_app" target="_blank" rel="noopener noreferrer" class="project-link">See project</a>
                         </div>
                     </div>
                 </div>
             </div>
+            <p class="projects-text">See what I'm working now in my <a href="#github">github</a></p>
         </div>
     </section>
     <section class="contact">
         <div class="contact-container" id="contact">
-            <h3 class="contact-title">
+            <h3 class="contact-title" data-aos="fade-up">
                 Contact me <span>here</span>!
             </h3>
-            <div class="contact-formContainer">
+            <div class="contact-formContainer" data-aos="zoom-in-up">
                 <iframe title="contact form" src="https://docs.google.com/forms/d/e/1FAIpQLScjW_AzBXgAnSgfj6Tdsac35sIHUO9O8vuYooQh-G_TbfySug/viewform?embedded=true" class="form">Cargando…</iframe>
             </div>
             <div class="other-contacts">
                 <a href="https://www.linkedin.com/in/leonel-gutierrez97/" target="_blank" rel="noopener noreferrer" class="contact-icon" >
                     <img src="./assets/contact-icons/linkedin.svg" alt="linkedin logo" class="socialIcons" />
                 </a>
-                <a href="https://github.com/Leogutierrez24" target="_blank" rel="noopener noreferrer" class="contact-icon" >
+                <a href="https://github.com/Leogutierrez24" id="github" target="_blank" rel="noopener noreferrer" class="contact-icon" >
                     <img src="./assets/contact-icons/github.svg" alt="github logo" class="socialIcons" />
                 </a>
             </div>

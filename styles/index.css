@@ -262,7 +262,20 @@ a, button, span {
 }
 
 .ecommerce {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/projects-img/project-preview2.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/projects-img/project_ecommerce.png);
+}
+
+.todoList {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/projects-img/project_todoList.png);
+}
+
+.projects-text {
+  font-family: "DM Sans", sans-serif;
+  color: #ECF1F4;
+}
+.projects-text > a {
+  color: #FF1C39;
+  text-decoration: none;
 }
 
 .contact-container {
@@ -341,7 +354,7 @@ footer > small {
 
 .mobileMenu {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -407,6 +420,9 @@ footer > small {
   .projects-list > div {
     justify-content: center;
   }
+  .projects-text {
+    text-align: center;
+  }
 }
 @media all and (max-width: 768px) {
   .hero, .about, .projects, .contact {
@@ -471,6 +487,9 @@ footer > small {
 @media all and (max-width: 425px) {
   .hero, .about, .projects, .contact {
     padding: 0 10px;
+  }
+  .topBar {
+    padding: 0 30px;
   }
   .hero-title {
     font-size: 2rem;
